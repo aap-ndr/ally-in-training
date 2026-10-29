@@ -77,3 +77,10 @@ android/app/build/
 
 # IDE settings
 .idea/
+
+# Local duplicate files
+/assets/app-logo copy.png
+/ios/.xcode.env 2.local
+/ios/AllyinTraining 3.xcworkspace/
+/ios/Podfile.properties 2.json
+/project-tree.txt
