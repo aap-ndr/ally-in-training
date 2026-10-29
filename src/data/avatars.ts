@@ -1,0 +1,338 @@
+// Avatar customization options for diverse representation
+
+export const SKIN_TONES = [
+  { name: "Light", value: "#FFE0BD" },
+  { name: "Fair", value: "#FFD5B3" },
+  { name: "Medium Light", value: "#E8B896" },
+  { name: "Medium", value: "#D19A6B" },
+  { name: "Tan", value: "#C68642" },
+  { name: "Medium Dark", value: "#A67051" },
+  { name: "Dark", value: "#8D5524" },
+  { name: "Deep", value: "#6B3E2E" },
+];
+
+export const HAIR_STYLES = [
+  { name: "Short", value: "short" },
+  { name: "Medium", value: "medium" },
+  { name: "Long", value: "long" },
+  { name: "Curly", value: "curly" },
+  { name: "Wavy", value: "wavy" },
+  { name: "Braids", value: "braids" },
+  { name: "Buzz Cut", value: "buzz" },
+  { name: "Locs", value: "locs" },
+  { name: "Afro", value: "afro" },
+  { name: "Ponytail", value: "ponytail" },
+  { name: "Bun", value: "bun" },
+  { name: "Pixie", value: "pixie" },
+];
+
+export const HAIR_COLORS = [
+  { name: "Black", value: "#1A1A1A" },
+  { name: "Dark Brown", value: "#3D2314" },
+  { name: "Brown", value: "#6F4E37" },
+  { name: "Auburn", value: "#A52A2A" },
+  { name: "Ginger", value: "#B55239" },
+  { name: "Blonde", value: "#E6C995" },
+  { name: "Platinum", value: "#F5F5F5" },
+  { name: "Gray", value: "#A8A8A8" },
+  { name: "Red", value: "#C93C20" },
+  { name: "Blue", value: "#4169E1" },
+  { name: "Purple", value: "#8B5CF6" },
+  { name: "Pink", value: "#EC4899" },
+  { name: "Green", value: "#10B981" },
+  { name: "Teal", value: "#14B8A6" },
+];
+
+export const BACKGROUND_COLORS = [
+  { name: "None", value: undefined },
+  { name: "Lavender", value: "#E9D5FF" },
+  { name: "Sky Blue", value: "#BFDBFE" },
+  { name: "Mint", value: "#A7F3D0" },
+  { name: "Peach", value: "#FED7AA" },
+  { name: "Rose", value: "#FECDD3" },
+  { name: "Lemon", value: "#FEF08A" },
+  { name: "Coral", value: "#FDA4AF" },
+  { name: "Aqua", value: "#A5F3FC" },
+  { name: "Lilac", value: "#DDD6FE" },
+  { name: "Sage", value: "#D9F99D" },
+  { name: "Sunset", value: "#FDBA74" },
+  { name: "Berry", value: "#F0ABFC" },
+];
+
+export const ACCESSORIES = [
+  { name: "None", value: undefined, icon: undefined },
+  { name: "Glasses", value: "glasses", icon: "glasses" },
+  { name: "Round Glasses", value: "round-glasses", icon: "round-glasses" },
+  { name: "Sunglasses", value: "sunglasses", icon: "sunglasses" },
+  { name: "Cap", value: "cap", icon: "cap" },
+  { name: "Beanie", value: "beanie", icon: "beanie" },
+  { name: "Headband", value: "headband", icon: "headband" },
+  { name: "Headphones", value: "headphones", icon: "headphones" },
+  { name: "Earbuds", value: "earbuds", icon: "earbuds" },
+  { name: "Bow", value: "bow", icon: "bow" },
+  { name: "Flower", value: "flower", icon: "flower" },
+  { name: "Hijab", value: "hijab", icon: "hijab" },
+  { name: "Turban", value: "turban", icon: "turban" },
+];
+
+// Pre-made diverse avatar presets for quick selection
+export interface AvatarPreset {
+  id: string;
+  name: string;
+  skinTone: string;
+  hairStyle: string;
+  hairColor: string;
+  accessory?: string;
+  category: "diverse" | "expressive" | "cool" | "classic";
+}
+
+export const AVATAR_PRESETS: AvatarPreset[] = [
+  // Diverse Collection
+  {
+    id: "maya",
+    name: "Maya",
+    skinTone: "#D19A6B",
+    hairStyle: "long",
+    hairColor: "#1A1A1A",
+    accessory: undefined,
+    category: "diverse",
+  },
+  {
+    id: "jamal",
+    name: "Jamal",
+    skinTone: "#8D5524",
+    hairStyle: "buzz",
+    hairColor: "#1A1A1A",
+    accessory: undefined,
+    category: "diverse",
+  },
+  {
+    id: "aisha",
+    name: "Aisha",
+    skinTone: "#A67051",
+    hairStyle: "locs",
+    hairColor: "#3D2314",
+    accessory: "hijab",
+    category: "diverse",
+  },
+  {
+    id: "liu",
+    name: "Liu",
+    skinTone: "#FFD5B3",
+    hairStyle: "short",
+    hairColor: "#1A1A1A",
+    accessory: "glasses",
+    category: "diverse",
+  },
+  {
+    id: "priya",
+    name: "Priya",
+    skinTone: "#C68642",
+    hairStyle: "braids",
+    hairColor: "#3D2314",
+    accessory: undefined,
+    category: "diverse",
+  },
+  {
+    id: "marcus",
+    name: "Marcus",
+    skinTone: "#6B3E2E",
+    hairStyle: "afro",
+    hairColor: "#1A1A1A",
+    accessory: undefined,
+    category: "diverse",
+  },
+  {
+    id: "sofia",
+    name: "Sofia",
+    skinTone: "#E8B896",
+    hairStyle: "curly",
+    hairColor: "#6F4E37",
+    accessory: undefined,
+    category: "diverse",
+  },
+  {
+    id: "kenji",
+    name: "Kenji",
+    skinTone: "#FFE0BD",
+    hairStyle: "medium",
+    hairColor: "#1A1A1A",
+    accessory: "headphones",
+    category: "diverse",
+  },
+
+  // Expressive Collection
+  {
+    id: "luna",
+    name: "Luna",
+    skinTone: "#FFE0BD",
+    hairStyle: "long",
+    hairColor: "#8B5CF6",
+    accessory: "flower",
+    category: "expressive",
+  },
+  {
+    id: "kai",
+    name: "Kai",
+    skinTone: "#C68642",
+    hairStyle: "wavy",
+    hairColor: "#4169E1",
+    accessory: undefined,
+    category: "expressive",
+  },
+  {
+    id: "zara",
+    name: "Zara",
+    skinTone: "#D19A6B",
+    hairStyle: "pixie",
+    hairColor: "#EC4899",
+    accessory: "earbuds",
+    category: "expressive",
+  },
+  {
+    id: "river",
+    name: "River",
+    skinTone: "#E8B896",
+    hairStyle: "curly",
+    hairColor: "#14B8A6",
+    accessory: "round-glasses",
+    category: "expressive",
+  },
+  {
+    id: "nova",
+    name: "Nova",
+    skinTone: "#8D5524",
+    hairStyle: "afro",
+    hairColor: "#EC4899",
+    accessory: undefined,
+    category: "expressive",
+  },
+  {
+    id: "indigo",
+    name: "Indigo",
+    skinTone: "#A67051",
+    hairStyle: "locs",
+    hairColor: "#4169E1",
+    accessory: "headband",
+    category: "expressive",
+  },
+
+  // Cool Collection
+  {
+    id: "alex",
+    name: "Alex",
+    skinTone: "#FFD5B3",
+    hairStyle: "short",
+    hairColor: "#1A1A1A",
+    accessory: "cap",
+    category: "cool",
+  },
+  {
+    id: "jordan",
+    name: "Jordan",
+    skinTone: "#A67051",
+    hairStyle: "buzz",
+    hairColor: "#1A1A1A",
+    accessory: "sunglasses",
+    category: "cool",
+  },
+  {
+    id: "skyler",
+    name: "Skyler",
+    skinTone: "#E8B896",
+    hairStyle: "ponytail",
+    hairColor: "#E6C995",
+    accessory: "headphones",
+    category: "cool",
+  },
+  {
+    id: "phoenix",
+    name: "Phoenix",
+    skinTone: "#C68642",
+    hairStyle: "medium",
+    hairColor: "#C93C20",
+    accessory: "beanie",
+    category: "cool",
+  },
+  {
+    id: "blake",
+    name: "Blake",
+    skinTone: "#6B3E2E",
+    hairStyle: "short",
+    hairColor: "#1A1A1A",
+    accessory: "glasses",
+    category: "cool",
+  },
+  {
+    id: "casey",
+    name: "Casey",
+    skinTone: "#D19A6B",
+    hairStyle: "wavy",
+    hairColor: "#3D2314",
+    accessory: "earbuds",
+    category: "cool",
+  },
+
+  // Classic Collection
+  {
+    id: "emma",
+    name: "Emma",
+    skinTone: "#FFE0BD",
+    hairStyle: "long",
+    hairColor: "#E6C995",
+    accessory: undefined,
+    category: "classic",
+  },
+  {
+    id: "noah",
+    name: "Noah",
+    skinTone: "#E8B896",
+    hairStyle: "short",
+    hairColor: "#6F4E37",
+    accessory: undefined,
+    category: "classic",
+  },
+  {
+    id: "amara",
+    name: "Amara",
+    skinTone: "#8D5524",
+    hairStyle: "braids",
+    hairColor: "#1A1A1A",
+    accessory: undefined,
+    category: "classic",
+  },
+  {
+    id: "liam",
+    name: "Liam",
+    skinTone: "#FFD5B3",
+    hairStyle: "medium",
+    hairColor: "#3D2314",
+    accessory: "glasses",
+    category: "classic",
+  },
+  {
+    id: "zoe",
+    name: "Zoe",
+    skinTone: "#D19A6B",
+    hairStyle: "bun",
+    hairColor: "#1A1A1A",
+    accessory: undefined,
+    category: "classic",
+  },
+  {
+    id: "ethan",
+    name: "Ethan",
+    skinTone: "#C68642",
+    hairStyle: "curly",
+    hairColor: "#3D2314",
+    accessory: undefined,
+    category: "classic",
+  },
+];
+
+export const AVATAR_CATEGORIES = [
+  { id: "diverse", name: "Diverse", color: "#6366F1" },
+  { id: "expressive", name: "Expressive", color: "#EC4899" },
+  { id: "cool", name: "Cool", color: "#10B981" },
+  { id: "classic", name: "Classic", color: "#F59E0B" },
+];

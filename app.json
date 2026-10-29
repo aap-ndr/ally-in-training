@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Ally in Training",
+    "slug": "ally-in-training",
+    "scheme": "allyintraining",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "icon": "./assets/appicon/adaptive-icon-fg.png",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.youthfornd.ally",
+      "icon": "./assets/appicon/adaptive-icon-fg.png",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCalendarsUsageDescription": "Ally in Training uses calendar access only if you choose to add events or reminders.",
+        "NSCalendarsFullAccessUsageDescription": "Ally in Training uses calendar access only if you choose to add events or reminders.",
+        "NSCalendarsWriteOnlyAccessUsageDescription": "Ally in Training uses calendar access only if you choose to add events or reminders.",
+        "NSRemindersUsageDescription": "Ally in Training uses reminders access only if you choose to create reminders."
+        
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.youthfornd.ally",
+      "icon": "./assets/appicon/adaptive-icon-fg.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/appicon/adaptive-icon-fg.png",
+        "backgroundImage": "./assets/appicon/adaptive-icon-bg.png"
+      },
+      "permissions": [],
+      "blockedPermissions": [
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    
+    "plugins": [
+       [ "expo-calendar",
+          {
+            "calendarPermission": "Ally in Training uses calendar access only if you choose to add events or reminders.",
+            "remindersPermission": "Ally in Training uses reminders access only if you choose to create reminders.",
+            "writeOnlyCalendarPermission": "Ally in Training uses calendar access only if you choose to add events or reminders."
+          }
+      ],
+     "@react-native-community/datetimepicker",
+      "expo-asset",
+      "expo-build-properties",
+      "expo-font",
+      "expo-mail-composer",
+      "expo-secure-store",
+      "expo-sqlite",
+      "expo-web-browser"
+    ]
+  }
+}

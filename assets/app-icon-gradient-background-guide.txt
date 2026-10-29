@@ -1,0 +1,25 @@
+To create a proper adaptive icon for Android and a visually consistent icon for iOS:
+
+1. Create a square PNG (at least 432x432px for Android 4x, 1024x1024px for iOS) with your app's gradient as the background. Use the gradient: #6366F1 → #8B5CF6 → #EC4899.
+2. Center your transparent app logo (app-logo-share.png) in the middle, sized so it fits within a 66% safe zone (Android) or visually centered (iOS).
+3. Save this as:
+   - assets/appicon/adaptive-icon-bg.png (Android background)
+   - assets/appicon/adaptive-icon-fg.png (Android foreground/logo)
+   - assets/AppIcon.appiconset/appstore.png (iOS icon)
+
+4. Update app.json as follows:
+
+"android": {
+  "icon": "./assets/appicon/adaptive-icon-fg.png",
+  "adaptiveIcon": {
+    "foregroundImage": "./assets/appicon/adaptive-icon-fg.png",
+    "backgroundImage": "./assets/appicon/adaptive-icon-bg.png"
+  }
+},
+"ios": {
+  "icon": "./assets/AppIcon.appiconset/appstore.png"
+}
+
+This ensures your icon looks perfect on both Android and iOS, with no white background and a beautiful gradient. Replace the PNGs above with your actual assets.
+
+For more details, see: https://developer.android.com/develop/ui/views/launch/icon_design_adaptive and https://developer.apple.com/design/human-interface-guidelines/app-icons

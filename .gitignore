@@ -1,0 +1,79 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+
+# Ignore node_modules
+node_modules/
+
+# Expo
+
+# Ignore Expo local/dev files
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+
+# Ignore native build artifacts and secrets
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+
+# Ignore Metro cache
+.metro-health-check*
+
+# debug
+
+# Ignore debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+
+# Ignore macOS system files and certs
+.DS_Store
+*.pem
+
+# typescript
+
+# Ignore TypeScript build info
+*.tsbuildinfo
+
+
+# Ignore Android APK/AAB builds only (keep android/ and ios/ folders tracked)
+*.apk
+*.aab
+
+
+# Expo log
+expo.log
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Local native tooling
+android/local.properties
+android/.gradle/
+android/.idea/
+ios/.xcode.env.local
+**/xcuserdata/
+**/.DS_Store
+
+# CocoaPods and generated native builds
+ios/Pods/
+ios/build/
+android/build/
+android/app/build/
+
+# IDE settings
+.idea/
